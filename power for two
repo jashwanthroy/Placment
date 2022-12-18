@@ -1,0 +1,18 @@
+#include <stdio.h>
+int powerToTwo(int N){
+    if(N == 1){
+        return 2;
+    }
+    int rc = powerToTwo(N - 1);
+    int sc = 2 * rc;
+    return sc;
+}
+int main()
+{
+    printf("Hello World");
+    int n;
+    scanf("%d",&n);
+    int res = powerToTwo(n);
+    printf("%d",res);
+    return 0;
+}
